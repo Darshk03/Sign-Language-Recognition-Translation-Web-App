@@ -18,7 +18,17 @@ git clone https://github.com/yourusername/sign_language.git
 cd sign_language
 ```
 
-### 3. **Install Dependencies**
+### 3. **Create & Activate Virtual Environment** (Recommended)
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+*On Linux/macOS, use:*  
+```bash
+source venv/bin/activate
+```
+
+### 4. **Install Dependencies**
 All required libraries are listed in `requirements.txt`.  
 Install them using:
 
@@ -26,10 +36,10 @@ Install them using:
 pip install -r requirements.txt
 ```
 
-### 4. **Tech Stack**
+### 5. **Tech Stack**
 See `techstack.txt` for a full list of technologies used.
 
-### 5. **Model Training (First Time Setup)**
+### 6. **Model Training (First Time Setup)**
 No pre-trained model is included.  
 To create and train your own sign language recognition model:
 
@@ -38,7 +48,7 @@ python app/training.py
 ```
 - This script will process your dataset and generate `Dataset/sign_language_model.h5`.
 
-### 6. **Run the Project**
+### 7. **Run the Project**
 Start the Django development server:
 
 ```bash
@@ -84,7 +94,7 @@ This software is open-source and free to use under the terms of the GNU GPL v3.
 
 ## 👨‍💻 Developer Notes
 
-- No virtual environment or requirements file is mandatory, but using one is recommended for isolation.
+- Using a virtual environment is recommended for isolation.
 - For video features, ensure you have `opencv-python` and related libraries installed.
 - For hand detection, `mediapipe` is required.
 - For deep learning, `tensorflow` and `keras` are used.
@@ -94,9 +104,11 @@ This software is open-source and free to use under the terms of the GNU GPL v3.
 ## 🚀 Quick Start
 
 ```bash
-# Clone, install dependencies, train model, and run server
+# Clone, create virtual environment, install dependencies, train model, and run server
 git clone https://github.com/yourusername/sign_language.git
 cd sign_language
+python -m venv venv
+venv\Scripts\activate
 pip install -r requirements.txt
 python app/training.py
 python manage.py runserver
@@ -113,6 +125,22 @@ For major changes, please open an issue first to discuss what you would like to 
 
 ## 📧 Contact
 
-For questions or support, contact: your.email@example.com
+For questions or support, contact: darshankeadre1815@gmail.com
+
+---
+
+## 🏷️ Icons Legend
+
+- ✋ Hand Sign
+- 🖥️ Computer Vision
+- 📖 Overview
+- 🛠️ Setup
+- 📦 Structure
+- ⚡ Features
+- 📜 License
+- 👨‍💻 Developer
+- 🚀 Quick Start
+- 📝 Contributing
+- 📧 Contact
 
 ---
