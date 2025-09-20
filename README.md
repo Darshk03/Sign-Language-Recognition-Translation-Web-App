@@ -127,20 +127,3 @@ For major changes, please open an issue first to discuss what you would like to 
 
 For questions or support, contact: darshankeadre1815@gmail.com
 
----
-
-## 🏷️ Icons Legend
-
-- ✋ Hand Sign
-- 🖥️ Computer Vision
-- 📖 Overview
-- 🛠️ Setup
-- 📦 Structure
-- ⚡ Features
-- 📜 License
-- 👨‍💻 Developer
-- 🚀 Quick Start
-- 📝 Contributing
-- 📧 Contact
-
----
