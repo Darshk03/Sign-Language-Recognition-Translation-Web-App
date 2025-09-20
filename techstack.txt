@@ -1,0 +1,72 @@
+### ✅ Tech Stack for This Project:
+
+This project is a **Django-based Sign Language Recognition System** that integrates machine learning, computer vision, and speech technologies. Here's a breakdown of the tech stack:
+
+---
+
+### 🔧 **Backend:**
+- **Python** — core programming language.
+- **Django** — web framework handling routes, views, templates, forms, and ORM.
+- **SQLite / PostgreSQL** — for storing user info, hand signs, and video references (based on Django models).
+- **TensorFlow** — used to load and use a pre-trained model for hand sign prediction.
+- **MediaPipe** — real-time hand tracking using computer vision.
+- **SpeechRecognition (`speech_recognition`)** — to convert audio to text using Google API.
+- **pyttsx3** — for text-to-speech conversion (pronunciation of predicted signs).
+- **OpenCV (`cv2`)** — for video capture, image manipulation, and rendering predictions in real-time.
+- **imageio** — to create videos from sequences of images.
+- **shutil / os / json / tempfile** — for file handling and temporary data operations.
+
+---
+
+### 🖼️ **Frontend:**
+- **HTML + Django Templates** — dynamic rendering with `index.html`, `log_in.html`, `new_sign.html`, etc.
+- **Bootstrap (likely)** — for styling (assumed based on standard Django projects).
+- **JavaScript (possibly)** — for interactivity on the frontend.
+
+---
+
+### 🔐 **Authentication:**
+- Django's built-in authentication system (`User`, `authenticate`, `login`, `logout`, decorators like `@login_required`).
+
+---
+
+### 🧠 **Machine Learning:**
+- A pre-trained hand sign recognition model is loaded from:
+  ```
+  Dataset/sign_language_model.h5
+  ```
+- Uses JSON label mappings (`label_mapping.json`, `labels_info.json`) to interpret predictions.
+
+---
+
+### 📁 Media Handling:
+- Uploaded sign images are saved in `media/hand_images`.
+- Videos for sentences are stored in `media/videos`.
+
+---
+
+### 📂 Modules/Files Breakdown:
+
+- **`views.py` (this file)**: All the main functionality:
+  - User login/register/logout
+  - Dashboard
+  - Add and train new signs
+  - Capture and predict signs using webcam
+  - Learn signs by converting text/speech to sign images/video
+
+- **`verify.py`**: Handles form input validation logic.
+- **`add_sign.py`**: Handles saving and formatting new sign images.
+- **`training.py`**: Handles retraining the ML model with new classes.
+- **`forms.py`**: Defines `HandSignForm` for Django forms.
+- **`models.py`**: Defines `HandImage` and `SentenceToVideo` models for storing image/video data.
+
+---
+
+### 🔄 Workflow Summary:
+
+1. **Register/Login** — user creates an account or logs in.
+2. **Dashboard** — user can add new signs, retrain model, or test recognition.
+3. **New Sign** — uploads a new hand sign and saves it to the DB.
+4. **Capture Sign** — opens webcam, uses Mediapipe + TensorFlow model to predict hand signs in real-time.
+5. **Learn Sign** — user types or speaks a sentence, app finds images for each character and makes a slideshow-style video.
+
